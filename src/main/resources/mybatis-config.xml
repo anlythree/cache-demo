@@ -7,13 +7,13 @@
 <!--        <setting name="logImpl" value="LOG4J"/>-->
 <!--    </settings>-->
     <!-- 设置别名 -->
-    <typeAliases>
-        <package name="pojo"/>
-    </typeAliases>
+<!--    <typeAliases>-->
+<!--        <package name="domain"/>-->
+<!--    </typeAliases>-->
     <!-- 配置运行环境 -->
     <environments default="mysql">
         <environment id="mysql">
-            <transactionManager type="JDBC"></transactionManager>
+            <transactionManager type="JDBC"/>
             <dataSource type="POOLED">
                 <property name="driver" value="${driver}"/>
                 <property name="url" value="${url}"/>
@@ -22,4 +22,7 @@
             </dataSource>
         </environment>
     </environments>
+    <mappers>
+        <mapper resource="mapper/UserMapper.xml"/>
+    </mappers>
 </configuration>
